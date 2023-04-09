@@ -12,7 +12,7 @@ searchPlace.addEventListener("keyup", async function (e) {
   try {
     if (e.key === "Enter") {
       const weatherAPI = await fetch(
-        `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${searchPlace.value}&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${searchPlace.value}&aqi=no`
       );
       const weatherObject = await weatherAPI.json();
       city.innerHTML = weatherObject.location.name;
